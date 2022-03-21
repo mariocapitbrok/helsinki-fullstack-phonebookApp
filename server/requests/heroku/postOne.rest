@@ -1,0 +1,7 @@
+POST https://obscure-escarpment-42748.herokuapp.com/api/persons/
+Content-Type: application/json
+
+{
+  "name": "Jorge Pruebas",
+  "number": "000-000-0000"
+}
