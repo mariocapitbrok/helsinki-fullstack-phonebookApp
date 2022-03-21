@@ -1,0 +1,21 @@
+.error {
+  font-size: large;
+  color: red;
+  background-color: rgb(216, 216, 216);
+  border: solid 2px;
+  border-color: red;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.success {
+  font-size: large;
+  color: green;
+  background-color: rgb(216, 216, 216);
+  border: solid 2px;
+  border-color: green;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
