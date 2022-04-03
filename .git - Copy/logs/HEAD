@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 7b701368dc00ba1307dd8c83fef1a6fe74de3f29 Mario Capitbrok <mario@capitbrok.com> 1647886293 -0600	commit (initial): first commit
-7b701368dc00ba1307dd8c83fef1a6fe74de3f29 0000000000000000000000000000000000000000 Mario Capitbrok <mario@capitbrok.com> 1647886293 -0600	Branch: renamed refs/heads/main to refs/heads/main
-7b701368dc00ba1307dd8c83fef1a6fe74de3f29 7b701368dc00ba1307dd8c83fef1a6fe74de3f29 Mario Capitbrok <mario@capitbrok.com> 1647886293 -0600	Branch: renamed refs/heads/main to refs/heads/main
-7b701368dc00ba1307dd8c83fef1a6fe74de3f29 1262a5d4092dc386398fe364ef0b9dc483d99b0e Mario Capitbrok <mario@capitbrok.com> 1647887570 -0600	commit: Copy client and server apps
-1262a5d4092dc386398fe364ef0b9dc483d99b0e 374d7ebf957283c47c2c3998fa00750234229612 Mario Capitbrok <mario@capitbrok.com> 1647889482 -0600	commit: 3.9 phonebook backend step9
-374d7ebf957283c47c2c3998fa00750234229612 e14a3998ef691f77b5443d50e2fe910f67ec4b45 Mario Capitbrok <mario@capitbrok.com> 1647890399 -0600	commit: 3.10 phonebook backedn step10
-e14a3998ef691f77b5443d50e2fe910f67ec4b45 12282500d7c0e91f3f62f9bc76a6d49909459bb5 Mario Capitbrok <mario@capitbrok.com> 1647899866 -0600	commit: 3.11 phonebook full stack
-12282500d7c0e91f3f62f9bc76a6d49909459bb5 e8cdfecb39ebe56cecd8d647a30146c753108171 Mario Capitbrok <mario@capitbrok.com> 1648911596 -0600	commit: 3.12 Command-line database
-e8cdfecb39ebe56cecd8d647a30146c753108171 5cd40e5cc0841685839b24930c3c08a0c5703dc1 Mario Capitbrok <mario@capitbrok.com> 1648915647 -0600	commit: 3.12 Command-line database
