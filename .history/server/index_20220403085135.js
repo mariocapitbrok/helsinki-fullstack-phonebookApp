@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+const mongoose = require('mongoose')
 const morgan = require('morgan')
 const cors = require('cors')
 const Person = require('./models/person')
@@ -104,14 +105,15 @@ app.post('/api/persons', (request, response) => {
     })
   }
 
-  const person = new Person({
+  const entry = {
+    id: generateId(),
     name: body.name,
     number: body.number,
-  })
+  }
 
-  person.save().then((savedPerson) => {
-    response.json(savedPerson)
-  })
+  entries = entries.concat(entry)
+
+  response.json(entry)
 })
 
 const PORT = process.env.PORT || 3001

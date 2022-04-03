@@ -1,17 +1,11 @@
 const mongoose = require('mongoose')
 
+//const url = `mongodb+srv://mariocapitbrok:${password}@testcluster.kj2xo.mongodb.net/phonebookApp?retryWrites=true&w=majority`
 const url = process.env.MONGODB_URI
 
 console.log('connecting to', url)
 
-mongoose
-  .connect(url)
-  .then((result) => {
-    console.log('connected to MongoDB')
-  })
-  .catch((error) => {
-    console.log('error connecting to MongoDB:', error.message)
-  })
+mongoose.connect(url)
 
 const personSchema = new mongoose.Schema({
   name: String,
@@ -26,4 +20,4 @@ personSchema.set('toJSON', {
   },
 })
 
-module.exports = mongoose.model('Person', personSchema)
+const Person = mongoose.model('Person', personSchema)
