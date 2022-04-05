@@ -66,18 +66,14 @@ app.get('/api/persons', (request, response) => {
 })
 
 app.get('/api/persons/:id', (request, response) => {
-  Person.findById(Number(request.params.id))
-    .then((person) => {
-      if (person) {
-        response.json(person)
-      } else {
-        response.status(404).end()
-      }
-    })
-    .catch((error) => {
-      console.log(error)
-      response.status(400).send({ error: 'malformed id' })
-    })
+  const id = Number(request.params.id)
+  const entry = entries.find((e) => e.id === id)
+
+  if (entry) {
+    response.json(entry)
+  } else {
+    response.status(404).end()
+  }
 })
 
 app.delete('/api/persons/:id', (request, response) => {
@@ -87,7 +83,9 @@ app.delete('/api/persons/:id', (request, response) => {
     })
     .catch((error) => {
       console.log(error)
-      response.status(204)
+      response
+        .status(204)
+        .send({ error: 'the record does not exist in the database' })
     })
 
   response.status(204).end()
