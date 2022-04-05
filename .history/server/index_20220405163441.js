@@ -65,8 +65,8 @@ app.get('/api/persons', (request, response) => {
   Person.find({}).then((entries) => response.json(entries))
 })
 
-app.get('/api/persons/:id', (request, response, next) => {
-  Person.findById(request.params.id)
+app.get('/api/persons/:id', (request, response) => {
+  Person.findById(Number(request.params.id))
     .then((person) => {
       if (person) {
         response.json(person)
@@ -74,7 +74,10 @@ app.get('/api/persons/:id', (request, response, next) => {
         response.status(404).end()
       }
     })
-    .catch((error) => next(error))
+    .catch((error) => {
+      console.log(error)
+      response.status(400).send({ error: 'malformed id' })
+    })
 })
 
 app.delete('/api/persons/:id', (request, response, next) => {
