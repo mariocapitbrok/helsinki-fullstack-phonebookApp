@@ -1,0 +1,7 @@
+PUT https://obscure-escarpment-42748.herokuapp.com/api/persons/624ded90c5129321a4964cb8
+Content-Type: application/json
+
+{
+  "name": "Arto Hellas",
+  "number": "040-123456"
+}
