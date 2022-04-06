@@ -6,29 +6,6 @@ const Person = require('./models/person')
 
 const app = express()
 
-let entries = [
-  {
-    id: 1,
-    name: 'Arto Hellas',
-    number: '040-123456',
-  },
-  {
-    id: 2,
-    name: 'Ada Lovelace',
-    number: '39-44-5323523',
-  },
-  {
-    id: 3,
-    name: 'Dan Abramov',
-    number: '12-43-234345',
-  },
-  {
-    id: 4,
-    name: 'Mary Poppendieck',
-    number: '39-23-6423122',
-  },
-]
-
 app.use(express.json())
 
 app.use(express.static('build'))
@@ -52,6 +29,8 @@ const generateId = () => {
 const existingName = (name) => {
   return entries.find((e) => e.name === name)
 }
+
+console.log(existingName('Artso Hellas'))
 
 app.get('/info', (request, response) => {
   Person.find({}).then((entries) => {
@@ -99,6 +78,12 @@ app.post('/api/persons', (request, response) => {
   if (!body.number) {
     return response.status(400).json({
       error: 'The number is missing',
+    })
+  }
+
+  if (existingName(body.name)) {
+    return response.status(400).json({
+      error: 'The name already exists in the phonebook',
     })
   }
 

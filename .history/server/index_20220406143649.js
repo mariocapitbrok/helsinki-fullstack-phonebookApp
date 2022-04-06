@@ -53,6 +53,8 @@ const existingName = (name) => {
   return entries.find((e) => e.name === name)
 }
 
+//console.log(existingName('Arto Hellas'))
+
 app.get('/info', (request, response) => {
   Person.find({}).then((entries) => {
     response.send(
@@ -99,6 +101,12 @@ app.post('/api/persons', (request, response) => {
   if (!body.number) {
     return response.status(400).json({
       error: 'The number is missing',
+    })
+  }
+
+  if (existingName(body.name)) {
+    return response.status(400).json({
+      error: 'The name already exists in the phonebook',
     })
   }
 
