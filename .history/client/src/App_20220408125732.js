@@ -46,8 +46,7 @@ const App = () => {
           }, 3000)
         })
         .catch((error) => {
-          setClassName('error')
-          setMessage(`${error.response.data.error}`)
+          console.log(error.response.data)
         })
     } else {
       const person = persons.find((person) => person.name === newPerson.name)
