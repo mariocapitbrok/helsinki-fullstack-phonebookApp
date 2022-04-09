@@ -50,7 +50,7 @@ const App = () => {
           setMessage(`${error.response.data.error}`)
           setTimeout(() => {
             setMessage(null)
-          }, 7000)
+          }, 5000)
         })
     } else {
       const person = persons.find((person) => person.name === newPerson.name)
@@ -82,7 +82,7 @@ const App = () => {
             setMessage(`${error.response.data.error}`)
             setTimeout(() => {
               setMessage(null)
-            }, 7000)
+            }, 3000)
             setPersons(persons.filter((person) => person.id !== id))
           })
     }
